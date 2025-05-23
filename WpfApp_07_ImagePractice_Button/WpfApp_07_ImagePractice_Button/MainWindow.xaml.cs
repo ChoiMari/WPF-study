@@ -18,7 +18,6 @@ namespace WpfApp_07_ImagePractice_Button
     public partial class MainWindow : Window
     {
         OpenFileDialog openFileDialog = new OpenFileDialog();
-        string imgFilePath;
 
         public MainWindow()
         {
@@ -31,7 +30,7 @@ namespace WpfApp_07_ImagePractice_Button
             openFileDialog.Title = "이미지 열기";
             if (openFileDialog.ShowDialog() == true)
             {
-                imgFilePath = openFileDialog.FileName; // 선택한 이미지 파일 경로를 imgFilePath에 저장
+                string imgFilePath = openFileDialog.FileName; // 선택한 이미지 파일 경로를 imgFilePath에 저장
                
                 if (imgFilePath != null) // 이미지 파일 경로가 null이 아닐 때
                 {
