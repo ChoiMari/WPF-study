@@ -50,8 +50,13 @@ namespace WpfApp_07_ImagePractice_Button
 
                 // 이미지 버튼에 추가
                 btn.Content = img; // 이미지 버튼에 추가
+
+                //버튼 크기 조절
                 btn.Width = double.NaN; // 버튼 너비 자동 조정
                 btn.Height = double.NaN; // 버튼 높이 자동 조정
+                // WPF에서 크기 설정 값 Auto는 XAML 전용 표현(.xaml에서만 Auto로 사용 가능)
+                // C# 코드에서는 Double.NaN을 써야 "자동 크기"처럼 동작
+                // C# 코드 기준 Width와 Height는 double 타입이라서 숫자만 받을 수 있음
 
             }
             else { 
